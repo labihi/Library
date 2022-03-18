@@ -62,15 +62,56 @@
 .modal-content {
     background-color: #fefefe;
     margin: auto;
-    padding: 20px;
+    padding: 40px;
     border: 1px solid #888;
     width: 80%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.form-title{
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.add-book-form{
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.add-book-form > div{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    width: 200px;
+}
+
+.number-page{
+    grid-column: 1/-1;
+    width: 200px;
+}
+
+#isRead{
+    grid-row: 3;
+    grid-column: 1/-1;
+}
+
+.add-button{
+    height: fit-content;
+    padding: 10px 20px;
+    width: 150px;
+    grid-column: 1/-1;
+    justify-self: right;
 }
 
 /* The Close Button */
 .close {
     color: #aaaaaa;
-    float: right;
+    justify-self: right;
+    margin-bottom: 20px;
     font-size: 28px;
     font-weight: bold;
 }
