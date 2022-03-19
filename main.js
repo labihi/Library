@@ -16,12 +16,11 @@ function addBookToLibrary(book){
 }
 
 function createBook(){
-    let title = prompt("Please insert a title","");
-    let author = prompt("Please insert an author","");
-    let pagesNumber = prompt("Please insert the number of pages","");
-    let isRead = prompt("Please tell me if the book has been read","");
+    const title = document.getElementById("title").value; 
+    const author = document.getElementById("author").value;
+    const pagesNumber = document.getElementById("pagesNumber").value;
+    const isRead = document.getElementById("isRead").checked; 
     const newBook = new Book(title,author,pagesNumber,isRead);
-
     addBookToLibrary(newBook);
 }
 

@@ -64,7 +64,7 @@
     margin: auto;
     padding: 40px;
     border: 1px solid #888;
-    width: 80%;
+    width: fit-content;
     display: grid;
     grid-template-rows: auto 1fr;
     grid-template-columns: 1fr 1fr;
@@ -80,6 +80,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 50%;
     gap: 20px;
 }
 
