@@ -1,3 +1,5 @@
+const bookShelf = document.getElementsByClassName("bookshelf")[0];
+
 let myLibrary = [];
 
 function Book(title,author,pagesNumber, isRead){
@@ -13,6 +15,36 @@ function removeBookFromLibrary(title){
 
 function addBookToLibrary(book){
     myLibrary.push(book);
+    const bookCard = document.createElement("div");
+    bookCard.classList.add("book-card");
+    bookShelf.appendChild(bookCard);
+    const bookInfo = document.createElement("div");
+    bookInfo.classList.add("book-info");
+    bookCard.appendChild(bookInfo);
+    const title = document.createElement("p");
+    title.classList.add("title");
+    const author = document.createElement("p");
+    author.classList.add("author");
+    const pages = document.createElement("p");
+    pages.classList.add("pages");
+    title.textContent = book.title;
+    author.textContent = book.author;
+    pages.textContent = book.pagesNumber;
+    bookInfo.appendChild(title);
+    bookInfo.appendChild(author);
+    bookInfo.appendChild(pages);
+    const bookButtons = document.createElement("div");
+    bookButtons.classList.add("book-buttons");
+    const readButton = document.createElement("button");
+    readButton.classList.add("read-book");
+    const removeButton = document.createElement("button");
+    removeButton.classList.add("remove-book");
+    let index = (element) => element.title === book.title;
+    readButton.dataset.bookIndex = myLibrary.findIndex(index);
+    removeButton.dataset.bookIndex = myLibrary.findIndex(index);
+    bookButtons.appendChild(readButton);
+    bookButtons.appendChild(removeButton);
+    bookCard.appendChild(bookButtons);
 }
 
 function createBook(){
@@ -54,3 +86,4 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
