@@ -73,9 +73,6 @@ button:active {
     transform: scale(0.99);
 }
 
-#add-book {
-}
-
 .header .title {
     display: flex;
     align-items: center;
@@ -113,14 +110,15 @@ button:active {
 
 /* Modal Content */
 .modal-content {
-    background-color: #fefefe;
+    background-color: #1b263b;
     margin: auto;
     padding: 40px;
-    border: 1px solid #888;
     width: fit-content;
     display: grid;
-    grid-template-rows: auto 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr;
+    gap: 20px;
+    grid-template-columns: auto;
+    color: #e0e1dd;
 }
 
 .form-title {
@@ -131,7 +129,6 @@ button:active {
 .add-book-form {
     grid-column: 1/-1;
     display: grid;
-    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     width: 50%;
     gap: 20px;
@@ -158,21 +155,27 @@ button:active {
     padding: 10px 20px;
     width: 150px;
     grid-column: 1/-1;
-    justify-self: right;
+    justify-self: center;
+}
+
+.top-part{
+    position: relative;
 }
 
 /* The Close Button */
 .close {
-    color: #aaaaaa;
+    position: absolute;
+    top: -30px;
+    right: -20px;
+    color: #e0e1dd;
     justify-self: right;
-    margin-bottom: 20px;
     font-size: 28px;
     font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-    color: #000;
+    color: #0d1b2a;
     text-decoration: none;
     cursor: pointer;
 }
