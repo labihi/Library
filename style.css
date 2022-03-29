@@ -107,6 +107,8 @@ button:focus {
 
 .footer a{
     fill: #e0e1dd;
+    display: flex;
+    justify-content: center;
 }
 /* The Modal (background) */
 .modal {
