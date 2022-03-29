@@ -46,9 +46,9 @@ function addBookToLibrary(book) {
     author.classList.add("author");
     const pages = document.createElement("p");
     pages.classList.add("pages");
-    title.textContent = book.title;
-    author.textContent = book.author;
-    pages.textContent = book.pagesNumber;
+    title.textContent = "Title: " + book.title;
+    author.textContent = "Author: " + book.author;
+    pages.textContent = "Pages: " + book.pagesNumber;
     bookInfo.appendChild(title);
     bookInfo.appendChild(author);
     bookInfo.appendChild(pages);
