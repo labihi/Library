@@ -11,6 +11,7 @@ function Book(title, author, pagesNumber, isRead) {
 
 function removeBookFromLibrary(title) {
     myLibrary.splice(myLibrary.findIndex((a) => a.title === title));
+	this.parentElement.parentElement.remove();
 }
 
 function toggleReadStatus() {
@@ -28,6 +29,8 @@ function toggleReadStatus() {
         this.classList.remove("read");
     }
 }
+
+
 
 function addBookToLibrary(book) {
     myLibrary.push(book);
@@ -60,6 +63,7 @@ function addBookToLibrary(book) {
     readButton.addEventListener("click", toggleReadStatus);
     removeButton.dataset.bookIndex = myLibrary.findIndex(index);
     removeButton.innerText = "Remove";
+	removeButton.addEventListener("click",removeBookFromLibrary);
     if (book.isRead) {
         readButton.innerText = "Read";
         readButton.classList.add("read");
