@@ -1,22 +1,23 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
-.container{
+.container {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 5fr auto;
     height: 100vh;
+    background-color: #0d1b2a;
 }
 
-.book-shelf{
+.book-shelf {
     display: grid;
     grid-auto-columns: 1fr;
 }
 
-.book-card{
+.book-card {
     display: flex;
     flex-direction: column;
     padding: 20px 10px;
@@ -25,7 +26,7 @@
     gap: 20px;
 }
 
-.book-buttons{
+.book-buttons {
     display: flex;
     flex-direction: column;
     width: fit-content;
@@ -34,14 +35,65 @@
 .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
-    background-color: aqua;
+    background-color: #1b263b;
 }
 
-.footer{
+button {
+    display: inline-block;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 20px;
+    margin: 0;
+    text-decoration: none;
+    background: #0069ed;
+    height: fit-content;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+    background: #0053ba;
+}
+
+button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+button:active {
+    transform: scale(0.99);
+}
+
+#add-book {
+}
+
+.header .title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    color: #e0e1dd;
+}
+
+.logo{
+    height: 50px;
+    filter: invert(100%) sepia(1%) saturate(1188%) hue-rotate(17deg) brightness(98%) contrast(79%);
+}
+
+.footer {
     display: flex;
     grid-row: -1;
-    background-color: aqua;
+    background-color: #1b263b;
+    color: #e0e1dd;
     padding: 10px 20px;
 }
 /* The Modal (background) */
@@ -71,12 +123,12 @@
     grid-template-columns: 1fr 1fr;
 }
 
-.form-title{
+.form-title {
     font-size: 2rem;
     font-weight: 800;
 }
 
-.add-book-form{
+.add-book-form {
     grid-column: 1/-1;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -85,23 +137,23 @@
     gap: 20px;
 }
 
-.add-book-form > div{
+.add-book-form > div {
     display: grid;
     grid-template-rows: 1fr 1fr;
     width: 200px;
 }
 
-.number-page{
+.number-page {
     grid-column: 1/-1;
     width: 200px;
 }
 
-#isRead{
+#isRead {
     grid-row: 3;
     grid-column: 1/-1;
 }
 
-.add-button{
+.add-button {
     height: fit-content;
     padding: 10px 20px;
     width: 150px;
